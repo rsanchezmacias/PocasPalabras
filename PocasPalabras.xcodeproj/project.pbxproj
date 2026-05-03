@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		12B5F1852DFD4EEE000505E3 /* PocasPalabras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocasPalabras.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CA97782F524CCB004C3946 /* PocasPalabras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocasPalabras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		12B5F1872DFD4EEE000505E3 /* PocasPalabras */ = {
+		12CA977A2F524CCB004C3946 /* PocasPalabras */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PocasPalabras;
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12B5F1822DFD4EEE000505E3 /* Frameworks */ = {
+		12CA97752F524CCB004C3946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12B5F17C2DFD4EEE000505E3 = {
+		12CA976F2F524CCB004C3946 = {
 			isa = PBXGroup;
 			children = (
-				12B5F1872DFD4EEE000505E3 /* PocasPalabras */,
-				12B5F1862DFD4EEE000505E3 /* Products */,
+				12CA977A2F524CCB004C3946 /* PocasPalabras */,
+				12CA97792F524CCB004C3946 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		12B5F1862DFD4EEE000505E3 /* Products */ = {
+		12CA97792F524CCB004C3946 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12B5F1852DFD4EEE000505E3 /* PocasPalabras.app */,
+				12CA97782F524CCB004C3946 /* PocasPalabras.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12B5F1842DFD4EEE000505E3 /* PocasPalabras */ = {
+		12CA97772F524CCB004C3946 /* PocasPalabras */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12B5F1902DFD4EEF000505E3 /* Build configuration list for PBXNativeTarget "PocasPalabras" */;
+			buildConfigurationList = 12CA97832F524CCD004C3946 /* Build configuration list for PBXNativeTarget "PocasPalabras" */;
 			buildPhases = (
-				12B5F1812DFD4EEE000505E3 /* Sources */,
-				12B5F1822DFD4EEE000505E3 /* Frameworks */,
-				12B5F1832DFD4EEE000505E3 /* Resources */,
+				12CA97742F524CCB004C3946 /* Sources */,
+				12CA97752F524CCB004C3946 /* Frameworks */,
+				12CA97762F524CCB004C3946 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				12B5F1872DFD4EEE000505E3 /* PocasPalabras */,
+				12CA977A2F524CCB004C3946 /* PocasPalabras */,
 			);
 			name = PocasPalabras;
 			packageProductDependencies = (
 			);
 			productName = PocasPalabras;
-			productReference = 12B5F1852DFD4EEE000505E3 /* PocasPalabras.app */;
+			productReference = 12CA97782F524CCB004C3946 /* PocasPalabras.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		12B5F17D2DFD4EEE000505E3 /* Project object */ = {
+		12CA97702F524CCB004C3946 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					12B5F1842DFD4EEE000505E3 = {
-						CreatedOnToolsVersion = 26.0;
+					12CA97772F524CCB004C3946 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 12B5F1802DFD4EEE000505E3 /* Build configuration list for PBXProject "PocasPalabras" */;
+			buildConfigurationList = 12CA97732F524CCB004C3946 /* Build configuration list for PBXProject "PocasPalabras" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 12B5F17C2DFD4EEE000505E3;
+			mainGroup = 12CA976F2F524CCB004C3946;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 12B5F1862DFD4EEE000505E3 /* Products */;
+			productRefGroup = 12CA97792F524CCB004C3946 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12B5F1842DFD4EEE000505E3 /* PocasPalabras */,
+				12CA97772F524CCB004C3946 /* PocasPalabras */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12B5F1832DFD4EEE000505E3 /* Resources */ = {
+		12CA97762F524CCB004C3946 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12B5F1812DFD4EEE000505E3 /* Sources */ = {
+		12CA97742F524CCB004C3946 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		12B5F18E2DFD4EEF000505E3 /* Debug */ = {
+		12CA97812F524CCD004C3946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -160,6 +160,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 367VP8X885;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -188,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		12B5F18F2DFD4EEF000505E3 /* Release */ = {
+		12CA97822F524CCD004C3946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,6 +224,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 367VP8X885;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -244,7 +246,7 @@
 			};
 			name = Release;
 		};
-		12B5F1912DFD4EEF000505E3 /* Debug */ = {
+		12CA97842F524CCD004C3946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -267,6 +269,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ricardosm.PocasPalabras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -275,7 +278,7 @@
 			};
 			name = Debug;
 		};
-		12B5F1922DFD4EEF000505E3 /* Release */ = {
+		12CA97852F524CCD004C3946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,6 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ricardosm.PocasPalabras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -309,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12B5F1802DFD4EEE000505E3 /* Build configuration list for PBXProject "PocasPalabras" */ = {
+		12CA97732F524CCB004C3946 /* Build configuration list for PBXProject "PocasPalabras" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12B5F18E2DFD4EEF000505E3 /* Debug */,
-				12B5F18F2DFD4EEF000505E3 /* Release */,
+				12CA97812F524CCD004C3946 /* Debug */,
+				12CA97822F524CCD004C3946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12B5F1902DFD4EEF000505E3 /* Build configuration list for PBXNativeTarget "PocasPalabras" */ = {
+		12CA97832F524CCD004C3946 /* Build configuration list for PBXNativeTarget "PocasPalabras" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12B5F1912DFD4EEF000505E3 /* Debug */,
-				12B5F1922DFD4EEF000505E3 /* Release */,
+				12CA97842F524CCD004C3946 /* Debug */,
+				12CA97852F524CCD004C3946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 12B5F17D2DFD4EEE000505E3 /* Project object */;
+	rootObject = 12CA97702F524CCB004C3946 /* Project object */;
 }
