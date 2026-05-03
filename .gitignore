@@ -1,0 +1,10 @@
+# Local notes (not for version control)
+notes/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# macOS
+.DS_Store
