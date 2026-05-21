@@ -53,6 +53,17 @@ struct SettingsView: View {
                 .foregroundStyle(theme.textPrimary, theme.textSecondary)
                 .listRowBackground(theme.surface)
 
+                Section("About") {
+                    Link(destination: URL(string: "https://rsanchezmacias.com/pocas-palabras/support/")!) {
+                        Label("Support", systemImage: "questionmark.circle")
+                    }
+                    Link(destination: URL(string: "https://rsanchezmacias.com/pocas-palabras/privacy/")!) {
+                        Label("Privacy Policy", systemImage: "lock.shield")
+                    }
+                }
+                .foregroundStyle(theme.textPrimary)
+                .listRowBackground(theme.surface)
+
                 Section {
                     Text("En pocas palabras v1.0")
                         .font(AppTheme.captionFont)
