@@ -63,8 +63,10 @@ struct ReminderFormView: View {
                     }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Save") {
-                            viewModel.save()
-                            dismiss()
+                            Task {
+                                await viewModel.save()
+                                dismiss()
+                            }
                         }
                         .foregroundStyle(viewModel.isValid ? theme.accent : theme.textTertiary)
                         .disabled(!viewModel.isValid)

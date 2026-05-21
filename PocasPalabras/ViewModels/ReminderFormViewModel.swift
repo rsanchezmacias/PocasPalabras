@@ -24,7 +24,9 @@ final class ReminderFormViewModel {
         self.notificationManager = notificationManager
     }
 
-    func save() {
+    func save() async {
+        await notificationManager.requestPermission()
+
         let reminder = Reminder(
             title: title.trimmingCharacters(in: .whitespaces),
             description: descriptionText.isEmpty ? nil : descriptionText,
