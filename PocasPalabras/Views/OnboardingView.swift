@@ -40,6 +40,7 @@ struct OnboardingView: View {
                             .font(AppTheme.bodyFont)
                             .padding(AppTheme.spacingSM + 4)
                             .background(theme.surface)
+                            .foregroundStyle(theme.textPrimary)
                             .clipShape(RoundedRectangle(cornerRadius: AppTheme.cornerRadiusSM))
                     }
 
@@ -57,7 +58,9 @@ struct OnboardingView: View {
                         )
                         .datePickerStyle(.compact)
                         .labelsHidden()
+                        .foregroundStyle(theme.textPrimary)
                         .tint(theme.accent)
+                        .colorScheme(.light)
                     }
 
                     // Life Expectancy
