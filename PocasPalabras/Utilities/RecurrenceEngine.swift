@@ -1,4 +1,5 @@
 import Foundation
+import OSLog
 
 /// Computes the next trigger date for a reminder based on its recurrence rule.
 ///
@@ -11,24 +12,31 @@ import Foundation
 ///
 /// This is a pure, deterministic function with no side effects.
 enum RecurrenceEngine {
-
+    
     static func calculateNextTrigger(for reminder: Reminder, from fromDate: Date) -> Date {
         let calendar = Calendar.current
         let from = calendar.startOfDay(for: fromDate)
-
+        let reminderHourAndMinutes = calendar.dateComponents([.hour, .minute], from: reminder.nextTriggerAt)
+        let fromWithTime = calendar.date(byAdding: reminderHourAndMinutes, to: from)
+        
+        guard let fromWithTime else {
+            AppLogger.notifications.warning("Failed to calculate next reminder date for \(reminder.title)")
+            return reminder.nextTriggerAt
+        }
+        
         switch reminder.recurrenceType {
         case .daily:
-            return calendar.date(byAdding: .day, value: 1, to: from)!
+            return calendar.date(byAdding: .day, value: 1, to: fromWithTime)!
 
         case .weekly:
-            return nextWeeklyOccurrence(weekday: reminder.weekday, from: from, calendar: calendar)
+            return nextWeeklyOccurrence(weekday: reminder.weekday, from: fromWithTime, calendar: calendar)
 
         case .monthly:
-            return nextMonthlyOccurrence(dayOfMonth: reminder.dayOfMonth, from: from, calendar: calendar)
+            return nextMonthlyOccurrence(dayOfMonth: reminder.dayOfMonth, from: fromWithTime, calendar: calendar)
 
         case .custom:
             let interval = max(1, reminder.recurrenceInterval ?? 1)
-            return calendar.date(byAdding: .day, value: interval, to: from)!
+            return calendar.date(byAdding: .day, value: interval, to: fromWithTime)!
         }
     }
 
@@ -56,11 +64,13 @@ enum RecurrenceEngine {
 
         let currentComponents = calendar.dateComponents([.year, .month, .day], from: from)
         let currentDay = currentComponents.day ?? 1
-
+        let fromHourAndMinutes = calendar.dateComponents([.hour, .minute], from: from)
+        let fallbackDate = calendar.date(byAdding: .month, value: 1, to: from)!
+        
         // Try current month first (if the target day hasn't passed yet).
         if targetDay > currentDay {
             if let candidate = dateWithDay(targetDay, year: currentComponents.year!, month: currentComponents.month!, calendar: calendar) {
-                return candidate
+                return calendar.date(byAdding: fromHourAndMinutes, to: candidate) ?? fallbackDate
             }
         }
 
@@ -73,11 +83,11 @@ enum RecurrenceEngine {
         }
 
         if let candidate = dateWithDay(targetDay, year: year, month: month, calendar: calendar) {
-            return candidate
+            return calendar.date(byAdding: fromHourAndMinutes, to: candidate) ?? fallbackDate
         }
 
         // Final fallback.
-        return calendar.date(byAdding: .month, value: 1, to: from)!
+        return fallbackDate
     }
 
     /// Returns `true` when the reminder's recurrence pattern includes `date`.
