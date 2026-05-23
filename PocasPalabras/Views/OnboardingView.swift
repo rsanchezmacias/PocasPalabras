@@ -5,19 +5,25 @@ struct OnboardingView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(ThemeManager.self) var theme
 
+    private let profile: UserProfile?
     var onComplete: () -> Void
 
+    init(profile: UserProfile? = nil, onComplete: @escaping () -> Void) {
+        self.profile = profile
+        self.onComplete = onComplete
+    }
+
     var body: some View {
-        ViewModelView({ OnboardingViewModel(modelContext: modelContext) }) { viewModel in
+        ViewModelView(makeViewModel) { viewModel in
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.spacingLG) {
                     Spacer().frame(height: AppTheme.spacingXL)
 
-                    Text("En pocas palabras")
+                    Text(viewModel.title)
                         .font(AppTheme.titleFont)
                         .foregroundStyle(theme.textPrimary)
 
-                    Text("A reflective life calendar.\nLet's begin with a few details.")
+                    Text(viewModel.subtitle)
                         .font(AppTheme.bodyFont)
                         .foregroundStyle(theme.textSecondary)
 
@@ -74,10 +80,10 @@ struct OnboardingView: View {
                     Spacer().frame(height: AppTheme.spacingMD)
 
                     Button {
-                        viewModel.createProfile()
+                        viewModel.save()
                         onComplete()
                     } label: {
-                        Text("Begin")
+                        Text(viewModel.actionLabel)
                             .font(AppTheme.headlineFont)
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
@@ -91,5 +97,9 @@ struct OnboardingView: View {
             }
             .gridBackground()
         }
+    }
+
+    private func makeViewModel() -> OnboardingViewModel {
+        OnboardingViewModel(modelContext: modelContext, profile: profile)
     }
 }
