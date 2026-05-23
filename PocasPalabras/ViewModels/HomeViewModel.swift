@@ -4,9 +4,13 @@ import Foundation
 final class HomeViewModel {
     var selectedDate = Calendar.current.startOfDay(for: Date())
     var showDayDetail = false
-
-    let engine: LifeCalendarEngine
+    
     let profile: UserProfile
+    
+    /// Keep as computed property to refresh updates on life expectancy
+    var engine: LifeCalendarEngine {
+        LifeCalendarEngine(dateOfBirth: profile.dateOfBirth, lifeExpectancy: profile.lifeExpectancy)
+    }
 
     var dateFormatter: DateFormatter {
         let f = DateFormatter()
@@ -16,7 +20,6 @@ final class HomeViewModel {
 
     init(profile: UserProfile) {
         self.profile = profile
-        self.engine = LifeCalendarEngine(dateOfBirth: profile.dateOfBirth, lifeExpectancy: profile.lifeExpectancy)
     }
 
     func openToday() {
